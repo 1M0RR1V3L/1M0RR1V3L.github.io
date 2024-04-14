@@ -5,9 +5,14 @@
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#333",
-    "icons": [{
+    "icons": [
+      {
         "src": "img/icon2.jpg",
         "sizes": "240x256",
         "type": "image/jpg"
-    }]
-}
+      }
+    ],          
+    "description": "Um teste apenas",
+    "lang": "pt",
+    "orientation": "any"
+  }
