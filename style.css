@@ -72,7 +72,7 @@ h2 {
 }
 
 .profile-card img {
-    width: 100px; /* Ajuste o tamanho da foto conforme necessário */
+    width: 100px; 
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -81,7 +81,7 @@ h2 {
 .social-links {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px; /* Espaço entre a foto e os links sociais */
+    margin-top: 10px; 
 }
 
 .social-links li {
@@ -104,4 +104,23 @@ h2 {
     transform: scale(1.1);
 }
 
+/* light theme */
+body.light {
+    background-color: #fff;
+    color: #333;
+}
+
+/* dark theme */
+body.dark {
+    background-color: #181a1b;
+    color: #000;
+    
+}
+
+/* system theme*/
+body.system {
+    background-color: #181a1b;
+    color: #000;
+    
+}
 /* Add responsive styles here */
