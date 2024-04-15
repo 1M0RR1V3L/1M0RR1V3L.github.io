@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="manifest" href="manifest.json"/>
     <script>
-        /*
 
         //FIRST OPTION
         if ('serviceWorker' in navigator) {
@@ -22,15 +21,15 @@
                 });
             });
         }
-        */
+      
         //SECOND OPTION
         /*
         if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('pwabuilder-sw')
+            navigator.serviceWorker.register('sw.js')
         }
         */$
         //THIRD OPTION
-
+        /*
         window.addEventListener('load', () => {
 			  registerSW();
 			});
@@ -48,6 +47,7 @@
 				}
 			  }
 			}
+            */
 		</script>
     </script>
 </body>
