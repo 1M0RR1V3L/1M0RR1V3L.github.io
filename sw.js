@@ -21,7 +21,7 @@ self.addEventListener('fetch', function (event) {
 });
 */
 
-/*
+
 // This is the "Offline page" service worker
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
@@ -69,7 +69,6 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
-*/
 
 // last option
 /*
@@ -105,6 +104,7 @@ self.addEventListener("fetch", function (event) {
 });
 */
 
+/*
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 const CACHE_NAME = "meu-portfolio-v1";
@@ -150,3 +150,5 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
+
+*/
