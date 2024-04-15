@@ -8,48 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/img/icon.ico"/>
     <link rel="stylesheet" href="style.css"/>
     <link rel="manifest" href="manifest.json"/>
-    <script>
-/*
-        //FIRST OPTION
-        if ('serviceWorker' in navigator) {
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function (err) {
-                    console.error('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-      */
-        //SECOND OPTION
 
-        if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('sw.js')
-        }
-
-        //THIRD OPTION
-        /*
-        window.addEventListener('load', () => {
-			  registerSW();
-			});
-		 
-			// Register the Service Worker
-			async function registerSW() {
-			  if ('serviceWorker' in navigator) {
-				try {
-				  await navigator
-						.serviceWorker
-						.register('sw.js');
-				}
-				catch (e) {
-				  console.log('SW registration failed');
-				}
-			  }
-			}
-
-        */
-    </script>
 </body>
 </head>
 
@@ -130,5 +89,46 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    /*
+        //FIRST OPTION
+        if ('serviceWorker' in navigator) {
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    console.error('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+        */
+        //SECOND OPTION
+        /*
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js')
+        }*/
+        //THIRD OPTION
+        
+        window.addEventListener('load', () => {
+                registerSW();
+            });
+            
+            // Register the Service Worker
+            async function registerSW() {
+                if ('serviceWorker' in navigator) {
+                try {
+                    await navigator
+                        .serviceWorker  
+                        .register('sw.js');
+                }
+                catch (e) {
+                    console.log('SW registration failed');
+                }
+                }
+            }
+
+        
+    </script>
 
 </html>
