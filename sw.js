@@ -20,7 +20,7 @@ self.addEventListener('fetch', function (event) {
     );
 });
 */
-/*
+
 // This is the "Offline page" service worker
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
@@ -68,7 +68,9 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
-*/
+
+// las option
+/*
 var staticCacheName = "pwa_dice";
 
 const filesToCache = [
@@ -99,3 +101,4 @@ self.addEventListener("fetch", function (event) {
 		})
 	);
 });
+*/
