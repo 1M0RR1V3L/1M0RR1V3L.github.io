@@ -1,5 +1,28 @@
-// This is the "Offline page" service worker
+self.addEventListener('install', function (event) {
+    event.waitUntil(
+        caches.open('meu-portfolio-v1').then(function (cache) {
+            return cache.addAll([
+                '/',
+                '/index.html',
+                '/styles/style.css',
+                '/scripts/script.js',
+                '/images/icon.png'
+            ]);
+        })
+    );
+});
 
+self.addEventListener('fetch', function (event) {
+    event.respondWith(
+        caches.match(event.request).then(function (response) {
+            return response || fetch(event.request);
+        })
+    );
+});
+
+
+// This is the "Offline page" service worker
+/*
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 const CACHE = "pwabuilder-page";
@@ -45,3 +68,4 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
+*/

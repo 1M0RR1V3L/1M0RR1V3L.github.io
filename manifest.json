@@ -1,20 +1,13 @@
 {
-    "background_color": "#ffffff",
-    "dir": "ltr",
-    "display": "standalone",
-    "name": "1m0rr1v3l.github",
-    "orientation": "any",
-    "scope": "PWA Scope",
-    "short_name": "1m0rr1v3l.github",
+    "name": "Meu Portfólio",
+    "short_name": "Portfólio",
     "start_url": "/index.html",
-    "theme_color": "#ffffff",
-    "icons": [
-      {
-        "src": "/img/icon.ico",
-        "type": "image/x-icon"
-      }
-    ],
-    "description": "Um teste",
-    "lang": "pt"
-  }
-  
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#333",
+    "icons": [{
+        "src": "images/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }]
+}
