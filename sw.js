@@ -158,7 +158,7 @@ var staticCacheName = "pwa_dice"
 const filesToCache = [
     "./index.html",
     "./style.css",
-    "./img/icon2.jpg",
+    "./img/icon2.png",
     "./script.js"
 ]
 

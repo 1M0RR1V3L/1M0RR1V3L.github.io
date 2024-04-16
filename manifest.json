@@ -1,19 +1,19 @@
 {
-    "name": "Meu Portfólio",
-    "short_name": "Portfólio",
-    "start_url": "index.html",
-    "display": "standalone",
-    "background_color": "#fff",
-    "theme_color": "#333",
-    "icons": [
-      {
-        "src": "img/icon2.jpg",
-        "sizes": "1011x1077",
-        "type": "image/jpg"
-        
-      }
-    ],          
-    "description": "Um teste apenas",
-    "lang": "pt",
-    "orientation": "any"
-  }
+  "name": "Meu Portfólio",
+  "short_name": "Portfólio",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#333",
+  "icons": [
+    {
+      "src": "img/icon2.png",
+      "sizes": "1011x1077",
+      "type": "image/png"
+    }
+  ],
+  "description": "Um teste apenas",
+  "lang": "pt",
+  "orientation": "any",
+  "dir": "auto"
+}
