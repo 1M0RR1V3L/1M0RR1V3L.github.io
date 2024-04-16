@@ -23,12 +23,13 @@ self.addEventListener('fetch', function (event) {
 
 // This is the "Offline page" service worker
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+//importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-const CACHE = "pwabuilder-page";
+//const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "offline.html";
+
+/*const offlineFallbackPage = "offline.html";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -67,7 +68,7 @@ self.addEventListener('fetch', (event) => {
       }
     })());
   }
-});
+});*/
 
 // last option
 /*
@@ -151,3 +152,32 @@ self.addEventListener('fetch', function (event) {
 });
 
 */
+
+var staticCacheName = "pwa_dice"
+
+const filesToCache = [
+    "./index.html",
+    "./style.css",
+    "./img/icon2.jpg",
+    "./script.js"
+]
+
+self.addEventListener("install", function (e) {
+    e.waitUntil(
+        caches.open(staticCacheName).then(function (cache) {
+            // return cache.addAll(["/"]);
+            console.log("ios")
+            return cache.addAll(filesToCache)
+        })
+    )
+})
+
+self.addEventListener("fetch", function (event) {
+    console.log(event.request.url)
+
+    event.respondWith(
+        caches.match(event.request).then(function (response) {
+            return response || fetch(event.request)
+        })
+    )
+})
