@@ -8,6 +8,22 @@
     <link rel="icon" type="image/x-icon" href="/img/icon.ico"/>
     <link rel="stylesheet" href="style.css"/>
     <link rel="manifest" href="manifest.json"/>
+    <script>
+        window.addEventListener("load", () => {
+            registerSW();
+        });
+
+        // Register the Service Worker
+        async function registerSW() {
+            if ("serviceWorker" in navigator) {
+                try {
+                    await navigator.serviceWorker.register("sw.js");
+                } catch (e) {
+                    console.log("SW registration failed");
+                }
+            }
+        }
+    </script>
 
 </head>
 
@@ -88,8 +104,8 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-
+    /<script>
+/*
         if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function () {
                     navigator.serviceWorker.register('sw.js')
@@ -130,6 +146,7 @@
                 }
             }
         */
+       
         
     </script>   
 
