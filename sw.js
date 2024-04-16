@@ -1,4 +1,4 @@
-/*self.addEventListener('install', function (event) {
+self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open('meu-portfolio-v1').then(function (cache) {
             return cache.addAll([
@@ -19,9 +19,8 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
-*/
 
-
+/*
 // This is the "Offline page" service worker
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
@@ -69,7 +68,7 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
-
+*/
 // last option
 /*
 var staticCacheName = "pwa_dice";
