@@ -1,0 +1,17 @@
+{
+	"name":"1M0RR1V3L_STATUS",
+    "short_name":"1MORR1V3L",
+    "start_url":"index.html",
+    "display":"standalone",
+    "background_color":"#5900b3",
+    "theme_color":"black",
+    "scope": ".",
+    "description":"This is a PWA tutorial.",
+    "icons":[
+    {
+    "src":"img/icon-240x256.png",                     
+    "sizes":"240x256",
+    "type":"image/png"
+    }
+  ]
+}
