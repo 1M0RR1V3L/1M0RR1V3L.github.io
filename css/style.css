@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -10,6 +11,9 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -58,12 +62,10 @@ h2 {
     text-decoration: underline;
 }
 
-
 .profile-card {
     display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
 .profile-card .card {
@@ -72,7 +74,7 @@ h2 {
 }
 
 .profile-card img {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -81,7 +83,7 @@ h2 {
 .social-links {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .social-links li {
@@ -105,30 +107,69 @@ h2 {
 }
 
 /* dropdown */
-.select-wrapper {
+.theme-switcher {
     position: relative;
     display: inline-block;
+    margin-left: 10px;
 }
 
-.select-wrapper select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 20px; 
+.theme-btn {
+    background: none;
+    border: 2px solid black;
+    border-radius: 20%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
 }
 
-.arrow {
+.dropdown {
+    display: none;
     position: absolute;
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #333;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    min-width: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.dropdown.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: none;
+    justify-content: center;
+    width: 100%;
+}
+
+.dropdown-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.dropdown-item:hover {
+    background-color: #ddd;
+}
 
 /* light theme */
 body.light {
@@ -139,14 +180,13 @@ body.light {
 /* dark theme */
 body.dark {
     background-color: #181a1b;
-    color: #000;
-    
+    color: #fff;
 }
 
-/* system theme*/
+/* system theme */
 body.system {
-    background-color: #181a1b;
-    color: #000;
-    
+    background-color: #f5f5f5;
+    color: #333;
 }
+
 /* Add responsive styles here */

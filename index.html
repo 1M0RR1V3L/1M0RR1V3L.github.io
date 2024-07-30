@@ -25,18 +25,23 @@
         }
     </script>
 </head>
-<body>
+<body class="system">
     <header>
         <h1>1M0RR1V3L</h1>
         <div class="theme-switcher">
-            <label for="theme-select">Escolha o modo de tema:</label>
-            <div class="select-wrapper">
-                <select id="theme-select">
-                    <option value="light">Claro</option>
-                    <option value="dark">Escuro</option>
-                    <option value="system">Seguir o sistema</option>
-                </select>
-                <div class="arrow"></div>
+            <button class="theme-btn" id="theme-trigger">
+                <img id="current-theme-icon" src="img/system.svg" alt="Mudar Tema" />
+            </button>
+            <div class="dropdown" id="theme-dropdown">
+                <button class="dropdown-item" data-theme="light">
+                    <img src="img/sun.svg" alt="Claro" />
+                </button>
+                <button class="dropdown-item" data-theme="dark">
+                    <img src="img/moon.svg" alt="Escuro" />
+                </button>
+                <button class="dropdown-item" data-theme="system">
+                    <img src="img/system.svg" alt="System" />
+                </button>
             </div>
         </div>
     </header>
@@ -89,7 +94,8 @@
             </div>
         </section>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/theme-toggle.js"></script>
     <footer></footer>
 </body>
 </html>
+    
