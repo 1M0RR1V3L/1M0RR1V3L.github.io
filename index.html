@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,19 +17,17 @@
             if ("serviceWorker" in navigator) {
                 try {
                     await navigator.serviceWorker.register("service-worker.js");
+                    console.log("SW registered");
                 } catch (e) {
                     console.log("SW registration failed");
                 }
             }
         }
     </script>
-
 </head>
-
 <body>
     <header>
         <h1>1M0RR1V3L</h1>
-
         <div class="theme-switcher">
             <label for="theme-select">Escolha o modo de tema:</label>
             <div class="select-wrapper">
@@ -39,13 +36,10 @@
                     <option value="dark">Escuro</option>
                     <option value="system">Seguir o sistema</option>
                 </select>
-                <div class="arrow" heref =""></div> <!-- Ícone de seta -->
+                <div class="arrow"></div>
             </div>
         </div>
-
-        
     </header>
-
     <main>
         <section class="profile-card">
             <div class="card">
@@ -63,14 +57,13 @@
             <div class="card">
                 <h2>Description:</h2>
                 <p>A majoring student in Analysis and Development System from UFC, Federal University from Ceará.</p>
-        
             </div>
             <div class="card">
                 <h3>Skills:</h3>
                 <ul>
                     <li>Front End</li>
                     <li>Back End</li>
-                    <li>Hardware </li>
+                    <li>Hardware</li>
                     <li>English</li>
                     <li>Git</li>
                 </ul>
@@ -79,7 +72,7 @@
                 <h4>Languages:</h4>
                 <ul>
                     <li>Python</li>
-                    <li>JS </li>
+                    <li>JS</li>
                     <li>C</li>
                     <li>GD Script</li>
                     <li>C#</li>
@@ -94,59 +87,9 @@
                     <li>Shadcn/ui</li>
                 </ul>
             </div>
-          
-          
         </section>
     </main>
+    <script src="./js/script.js"></script>
+    <footer></footer>
 </body>
-    <footer>
-
-    </footer>
-
-    <!-- <script src="./js/script.js"></script> -->
-    <script>
-/*
-        if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function () {
-                    navigator.serviceWorker.register('sw.js')
-                        .then(function (registration) {
-                            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                        })
-                        .catch(function (err) {
-                            console.error('ServiceWorker registration failed: ', err);
-                        });
-                });
-            }
-    
-        //SECOND OPTION
-        /*
-        if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('sw.js');
-        }
-        */
-      
-        //THIRD OPTION
-        /*
-              
-        window.addEventListener('load', () => {
-                registerSW();
-            });
-            
-            // Register the Service Worker
-            async function registerSW() {
-                if ('serviceWorker' in navigator) {
-                try {
-                    await navigator
-                        .serviceWorker  
-                        .register('sw.js');
-                }
-                catch (e) {
-                    console.log('SW registration failed');
-                }
-                }
-            }
-        */
-       
-    </script>   
-
 </html>
