@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
             case 'dark':
                 currentThemeIcon.src = "img/moon.svg";
                 break;
-            default:
+            case 'system':
+                // Verificar a preferência de cores do sistema
+                const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                document.body.classList.add(systemTheme);
                 currentThemeIcon.src = "img/system.svg";
                 break;
         }
@@ -54,9 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (savedTheme) {
         applyTheme(savedTheme);
     } else {
-        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         applyTheme("system");
     }
+
+    // Atualizar tema automaticamente se o usuário mudar as preferências do sistema
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+        if (document.body.classList.contains("system")) {
+            applyTheme("system");
+        }
+    });
 
     window.addEventListener("click", function (event) {
         if (!event.target.closest('.theme-switcher')) {
