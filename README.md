@@ -21,7 +21,7 @@ Para configurar o projeto localmente, siga estes passos:
 1. **Clone o Repositório**:
 
     ```
-    git clone (https://github.com/1M0RR1V3L/1M0RR1V3L.github.io.git)
+    git clone https://github.com/1M0RR1V3L/1M0RR1V3L.github.io.git
     cd 1M0RR1V3L.github.io
     ```
 
