@@ -21,8 +21,8 @@ Para configurar o projeto localmente, siga estes passos:
 1. **Clone o Repositório**:
 
     ```bash
-    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-    cd SEU_REPOSITORIO
+    git clone [(https://github.com/1M0RR1V3L/1M0RR1V3L.github.io.git)]
+    cd 1M0RR1V3L.github.io
     ```
 
 2. **Instale as Dependências**:
