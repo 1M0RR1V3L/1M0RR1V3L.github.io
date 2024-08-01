@@ -46,11 +46,12 @@
         </div>
     </header>
     <main>
+        <!-- Seção de perfil -->
         <section class="profile-card">
             <div class="card">
                 <img src="img/perfil.jpg" alt="perfil">
-                <h3>Meu Perfil</h3>
-                <p>Conecte-se comigo nas redes sociais:</p>
+                <h3>LVL22</h3>
+                <p>Também estou aqui:</p>
                 <ul class="social-links">
                     <li><a href="https://www.linkedin.com/in/1m0rr1v3l/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a></li>
                     <li><a href="https://github.com/1M0RR1V3L" target="_blank"><img src="img/github.png" alt="GitHub"></a></li>
@@ -58,44 +59,47 @@
                 </ul>
             </div>
         </section>
+
+        <!-- Seção do card expansível -->
         <section class="card-section">
-            <div class="card">
-                <h2>Description:</h2>
-                <p>A majoring student in Analysis and Development System from UFC, Federal University from Ceará.</p>
-            </div>
-            <div class="card">
-                <h3>Skills:</h3>
-                <ul>
-                    <li>Front End</li>
-                    <li>Back End</li>
-                    <li>Hardware</li>
-                    <li>English</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h4>Languages:</h4>
-                <ul>
-                    <li>Python</li>
-                    <li>JS</li>
-                    <li>C</li>
-                    <li>GD Script</li>
-                    <li>C#</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h4>Frameworks/Lib:</h4>
-                <ul>
-                    <li>React/NextJS</li>
-                    <li>Django</li>
-                    <li>Tailwind</li>
-                    <li>Shadcn/ui</li>
-                </ul>
+            <div class="expandable-card">
+                <label for="expand-toggle" class="expand-card-title">Categorias</label>
+                <input type="checkbox" id="expand-toggle" class="expand-toggle">
+                <div class="expand-card-content">
+                    <div class="card">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Front End</li>
+                            <li>Back End</li>
+                            <li>Hardware</li>
+                            <li>English</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Languages</h3>
+                        <ul class="icon-list">
+                            <li><img src= "img/python.svg" alt="Python" title="Python"></li>
+                            <li><img src="img/js.svg" alt="JavaScript" title="JavaScript"></li>
+                            <li><img src="img/c.svg" alt="C" title="C"></li>
+                            <li><img src="img/godot.svg" alt="GD Script" title="GD Script"></li>
+                            <li><img src="img/c_hashtag.svg" alt="C#" title="C#"></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Frameworks/Lib</h3>
+                        <ul>
+                           <li><img src= "img/react.svg" alt="React/NextJs" title="React/NextJs"></li>
+                           <li><img src= "img/dj.svg" alt="Django" title="Django"></li>
+                           <li><img src= "img/tailwind.svg" alt="TailwindCss" title="TailwindCss"></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
+            </main>
     <script src="./js/theme-toggle.js"></script>
+    <script src="./js/dropdown.js"></script>
     <footer></footer>
 </body>
 </html>
-    

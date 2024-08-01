@@ -1,3 +1,4 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -28,6 +29,7 @@ h2, h3, h4, .card {
     color: #333;
 }
 
+/* Estilo dos Cards */
 .card-section {
     display: flex;
     flex-wrap: wrap;
@@ -38,30 +40,112 @@ h2, h3, h4, .card {
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     margin: 10px;
     width: 300px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.card h2, .card h3, .card h4 {
-    margin-top: 0;
-    font-size: 1.5rem;
+.card-title {
+    background: #2d2f31;
+    color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-align: center;
 }
 
-.card p {
-    margin-bottom: 10px;
-    color: #333;
+.card ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.card a {
-    color: #007bff;
-    text-decoration: none;
+.card ul li {
+    margin: 5px 10px;
+    text-align: center;
 }
 
-.card a:hover {
-    text-decoration: underline;
+/* Card Expansível */
+.expandable-card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    width: 40vh;
+    max-width: 500px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
 }
 
+.expand-card-title {
+    background: #2d2f31;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.expand-card-title::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.expand-toggle {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+.expand-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.expand-card-content .card {
+    margin-bottom: 20px;
+}
+
+/* Animação de Expansão e Recolhimento */
+.expand-toggle:checked + .expand-card-content {
+    max-height: 1000px;
+    padding: 20px;
+}
+
+.expand-toggle:checked + .expand-card-content + .expand-card-title::after {
+    transform: rotate(45deg);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .expandable-card {
+        max-width: 100%;
+    }
+}
+
+/* Centralização do Card Principal */
 .profile-card {
     display: flex;
     justify-content: center;
@@ -80,6 +164,7 @@ h2, h3, h4, .card {
     margin-bottom: 10px;
 }
 
+/* Estilo dos Links Sociais */
 .social-links {
     list-style-type: none;
     padding: 0;
@@ -106,7 +191,7 @@ h2, h3, h4, .card {
     transform: scale(1.1);
 }
 
-/* dropdown */
+/* Dropdown */
 .theme-switcher {
     position: relative;
     display: inline-block;
@@ -114,8 +199,7 @@ h2, h3, h4, .card {
     background-color: #fff;
     border-radius: 20%;
     padding: 0px; 
-
-}   
+}
 
 .theme-btn {
     background: none;
@@ -176,14 +260,37 @@ h2, h3, h4, .card {
     background-color: #ddd;
 }
 
-/* light theme */
+/* Temas */
 body.light {
     background-color: #fff;
     color: #333;
 }
 
-/* dark theme */
 body.dark {
     background-color: #181a1b;
     color: #fff;
+}
+
+/* Estilo da lista de ícones */
+.icon-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon-list li {
+    margin: 10px;
+    text-align: center;
+}
+
+.icon-list img {
+    width: 40px; /* Ajuste o tamanho dos ícones conforme necessário */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icon-list img:hover {
+    transform: scale(1.1);
 }
