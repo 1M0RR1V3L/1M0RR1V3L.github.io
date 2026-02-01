@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1M0RR1V3L STATUS</title>
-    <link rel="icon" type="image/x-icon" href="/img/icon.ico"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="manifest" href="manifest.json"/>
+    <meta name="description" content="Portfólio de 1M0RR1V3L - Desenvolvedor Full Stack">
+    <meta name="theme-color" content="#3569f6">
+    <title>1M0RR1V3L | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon.ico" />
+    <link rel="apple-touch-icon" href="./img/icon-192x192.png">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="manifest" href="manifest.json" />
     <script>
         window.addEventListener("load", () => {
             registerSW();
         });
 
-        // Register the Service Worker
         async function registerSW() {
             if ("serviceWorker" in navigator) {
                 try {
@@ -25,81 +28,389 @@
         }
     </script>
 </head>
+
 <body class="system">
+    <!-- Header com navegação -->
     <header>
-        <h1>1M0RR1V3L</h1>
-        <div class="theme-switcher">
-            <button class="theme-btn" id="theme-trigger">
-                <img id="current-theme-icon" src="img/system.svg" alt="Mudar Tema" />
-            </button>
-            <div class="dropdown" id="theme-dropdown">
-                <button class="dropdown-item" data-theme="light">
-                    <img src="img/sun.svg" alt="Claro" />
-                </button>
-                <button class="dropdown-item" data-theme="dark">
-                    <img src="img/moon.svg" alt="Escuro" />
-                </button>
-                <button class="dropdown-item" data-theme="system">
-                    <img src="img/system.svg" alt="System" />
+        <nav class="navbar">
+            <a href="#" class="logo">1M0RR1V3L</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="theme-switcher">
+                    <button class="theme-btn" id="theme-trigger" aria-label="Mudar tema">
+                        <img id="current-theme-icon" src="img/system.svg" alt="Tema" />
+                    </button>
+                    <div class="dropdown" id="theme-dropdown">
+                        <button class="dropdown-item" data-theme="light">
+                            <img src="img/sun.svg" alt="Claro" />
+                            <span>Claro</span>
+                        </button>
+                        <button class="dropdown-item" data-theme="dark">
+                            <img src="img/moon.svg" alt="Escuro" />
+                            <span>Escuro</span>
+                        </button>
+                        <button class="dropdown-item" data-theme="system">
+                            <img src="img/system.svg" alt="Sistema" />
+                            <span>Sistema</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
-        </div>
+        </nav>
     </header>
+
     <main>
-        <!-- Seção de perfil -->
-        <section class="profile-card">
-            <div class="card">
-                <img src="img/perfil.jpg" alt="perfil">
-                <h3>LVL22</h3>
-                <p>Também estou aqui:</p>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/1m0rr1v3l/" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a></li>
-                    <li><a href="https://github.com/1M0RR1V3L" target="_blank"><img src="img/github.png" alt="GitHub"></a></li>
-                    <li><a href="https://www.instagram.com/1m0rr1v3l/" target="_blank"><img src="img/insta.png" alt="Instagram"></a></li>
-                </ul>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="img/perfil.jpg" alt="Foto de perfil">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span>Disponível</span>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <p class="greeting">Olá, eu sou</p>
+                    <h1>1M0RR1V3L</h1>
+                    <p class="subtitle">Desenvolvedor Full Stack</p>
+                    <p class="level-badge">LVL 22</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Contato</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-arrow"></div>
             </div>
         </section>
 
-        <!-- Seção do card expansível -->
-        <section class="card-section">
-            <div class="expandable-card">
-                <label for="expand-toggle" class="expand-card-title">Mais</label>
-                <input type="checkbox" id="expand-toggle" class="expand-toggle">
-                <div class="expand-card-content">
-                    <div class="card">
-                        <h3>Skills</h3>
-                        <ul>
-                            <li>Front End</li>
-                            <li>Back End</li>
-                            <li>Hardware</li>
-                            <li>English</li>
-                            <li>Git</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Languages</h3>
-                        <ul class="icon-list">
-                            <li><img src= "img/python.svg" alt="Python" title="Python"></li>
-                            <li><img src="img/js.svg" alt="JavaScript" title="JavaScript"></li>
-                            <li><img src="img/c.svg" alt="C" title="C"></li>
-                            <li><img src="img/godot.svg" alt="GD Script" title="GD Script"></li>
-                            <li><img src="img/c_hashtag.svg" alt="C#" title="C#"></li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Frameworks/Lib</h3>
-                        <ul>
-                           <li><img src= "img/react.svg" alt="React/NextJs" title="React/NextJs"></li>
-                           <li><img src= "img/dj.svg" alt="Django" title="Django"></li>
-                           <li><img src= "img/tailwind.svg" alt="TailwindCss" title="TailwindCss"></li>
-                        </ul>
+        <!-- Sobre Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Desenvolvedor apaixonado por tecnologia, com experiência em desenvolvimento web full stack e
+                            game development. Sempre em busca de novos desafios e aprendizados.</p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-icon">💻</span>
+                                <span>Full Stack Dev</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🎮</span>
+                                <span>Game Dev</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🔧</span>
+                                <span>Hardware</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-icon">🌐</span>
+                                <span>English</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-            </main>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills & Tecnologias</h2>
+
+                <div class="skills-grid">
+                    <!-- Linguagens -->
+                    <div class="skill-card">
+                        <h3>Linguagens</h3>
+                        <div class="skill-icons">
+                            <div class="skill-item" data-tooltip="Python">
+                                <img src="img/python.svg" alt="Python">
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="JavaScript">
+                                <img src="img/js.svg" alt="JavaScript">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="C">
+                                <img src="img/c.svg" alt="C">
+                                <span>C</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="Godot / GDScript">
+                                <img src="img/godot.svg" alt="Godot">
+                                <span>Godot</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks & Libraries -->
+                    <div class="skill-card">
+                        <h3>Frameworks & Runtimes</h3>
+                        <div class="skill-icons">
+                            <div class="skill-item" data-tooltip="Node.js">
+                                <img src="img/node.svg" alt="Node.js">
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="React">
+                                <img src="img/react.svg" alt="React">
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="Next.js">
+                                <img src="img/next.svg" alt="Next.js">
+                                <span>Next.js</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="Django">
+                                <img src="img/dj.svg" alt="Django">
+                                <span>Django</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="FastAPI">
+                                <img src="img/fastapi.svg" alt="FastAPI">
+                                <span>FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ferramentas -->
+                    <div class="skill-card">
+                        <h3>Ferramentas</h3>
+                        <div class="skill-icons">
+                            <div class="skill-item" data-tooltip="Git">
+                                <img src="img/git.svg" alt="Git">
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="GitHub">
+                                <img src="img/github.png" alt="GitHub">
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item" data-tooltip="Tailwind CSS">
+                                <img src="img/tailwind.svg" alt="Tailwind">
+                                <span>Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Projetos em Destaque</h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+
+                <div class="projects-grid">
+                    <!-- Projeto 1 -->
+                    <article class="project-card featured">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>🎮</span>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" title="Ver Projeto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Godot</span>
+                                <span class="tag">GDScript</span>
+                            </div>
+                            <h3>Game Project</h3>
+                            <p>Projeto de jogo desenvolvido com Godot Engine.</p>
+                            <div class="project-footer">
+                                <span class="project-status private">Privado</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>🌐</span>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="https://github.com/1M0RR1V3L/1M0RR1V3L.github.io" target="_blank"
+                                    class="project-link" title="Ver no GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">PWA</span>
+                            </div>
+                            <h3>Portfolio PWA</h3>
+                            <p>Este portfólio - Uma Progressive Web App instalável.</p>
+                            <div class="project-footer">
+                                <a href="https://github.com/1M0RR1V3L/1M0RR1V3L.github.io" target="_blank"
+                                    class="repo-link">
+                                    <img src="img/github.png" alt="GitHub">
+                                    <span>Ver Repositório</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>🐍</span>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link disabled" title="Projeto Privado">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                            </div>
+                            <h3>Web Application</h3>
+                            <p>Aplicação web desenvolvida com Django.</p>
+                            <div class="project-footer">
+                                <span class="project-status private">Privado</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <span>⚛️</span>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link disabled" title="Projeto Privado">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Next.js</span>
+                            </div>
+                            <h3>Frontend Project</h3>
+                            <p>Projeto frontend moderno com React e Next.js.</p>
+                            <div class="project-footer">
+                                <span class="project-status private">Privado</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-cta">
+                    <a href="https://github.com/1M0RR1V3L?tab=repositories" target="_blank" class="btn btn-outline">
+                        Ver Todos os Repositórios
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Conecte-se Comigo</h2>
+                <p class="section-subtitle">Encontre-me nas redes sociais e plataformas acadêmicas</p>
+
+                <div class="social-grid">
+                    <a href="https://github.com/1M0RR1V3L" target="_blank" class="social-card">
+                        <img src="img/github.png" alt="GitHub">
+                        <span class="social-name">GitHub</span>
+                        <span class="social-handle">@1M0RR1V3L</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/1m0rr1v3l/" target="_blank" class="social-card">
+                        <img src="img/linkedin.png" alt="LinkedIn">
+                        <span class="social-name">LinkedIn</span>
+                        <span class="social-handle">1m0rr1v3l</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/1m0rr1v3l/" target="_blank" class="social-card">
+                        <img src="img/insta.png" alt="Instagram">
+                        <span class="social-name">Instagram</span>
+                        <span class="social-handle">@1m0rr1v3l</span>
+                    </a>
+
+                    <a href="#" target="_blank" class="social-card">
+                        <img src="img/orcid.svg" alt="ORCID">
+                        <span class="social-name">ORCID</span>
+                        <span class="social-handle">Perfil Acadêmico</span>
+                    </a>
+
+                    <a href="#" target="_blank" class="social-card">
+                        <img src="img/lattes.svg" alt="Lattes">
+                        <span class="social-name">Lattes</span>
+                        <span class="social-handle">Currículo Lattes</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 1M0RR1V3L. Todos os direitos reservados.</p>
+                <p class="footer-tech">Feito com ❤️ | PWA Enabled</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/theme-toggle.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/theme-toggle.js"></script>
     <script src="./js/dropdown.js"></script>
     <footer></footer>
 </body>
+
 </html>

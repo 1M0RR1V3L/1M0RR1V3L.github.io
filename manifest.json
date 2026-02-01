@@ -1,93 +1,37 @@
 {
+  "name": "1M0RR1V3L Portfolio",
+  "short_name": "1M0RR1V3L",
+  "description": "Portfolio de desenvolvedor Full Stack - PWA",
   "theme_color": "#3569f6",
-  "background_color": "3569f6",
-  "display": "fullscreen",
-  "scope": "/1M0RR1V3L.github.io/",
-  "start_url": "/1M0RR1V3L.github.io/",
-  "name": "1m0rr1v3l-Status",
-  "short_name": "1m0rr1v3l",
-  "description": "PWA 1m0rr1v3l",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "id": "/",
+  "categories": ["portfolio", "developer", "technology"],
   "icons": [
     {
-        "src": "./img/icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "./img/icon-256x256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-      },
-      {
-        "src": "./img/icon-384x384.png",
-        "sizes": "384x384",
-        "type": "image/png"
-      },
-      {
-        "src": "./img/icon-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      },
-      {
-        "src": "./img/python.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/js.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/c.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/c_hashtag.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/dj.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/godot.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/react.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/shadcn.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/tailwind.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/moon.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/sun.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      },
-      {
-        "src": "./img/system.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      }
-  
+      "src": "./img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./img/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
