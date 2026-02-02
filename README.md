@@ -66,7 +66,7 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 Se tiver dúvidas ou sugestões, entre em contato:
 
-- **Email**: lucassousa28@alu.ufc.com
+- **Email**: lucassousa28@alu.ufc.br
 - **LinkedIn**: [1m0rr1v3l]([https://www.linkedin.com/in/seu-perfil](https://www.linkedin.com/in/1m0rr1v3l/))
 - **GitHub**: [1m0rr1v3l](https://github.com/1M0RR1V3L)
 
